@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1"
+         metadata-complete="true">
+
+    <display-name>ESP32 Robot Car Controller</display-name>
+    <description>
+        Control para Robot KUONGSHUN AD175 ESP32 WiFi Camera 2WD
+        SENA CIMM - Programa ADSO 228118
+    </description>
+
+    <!-- ==================== SERVLETS ==================== -->
+
+    <servlet>
+        <servlet-name>RobotConfigServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.RobotConfigServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RobotControlServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.RobotControlServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CameraProxyServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.CameraProxyServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RobotStatusServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.RobotStatusServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FotoCapturaServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.FotoCapturaServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ModoAutonomoServlet</servlet-name>
+        <servlet-class>co.sena.cimm.robot.servlet.ModoAutonomoServlet</servlet-class>
+    </servlet>
+
+    <!-- ==================== MAPPINGS ==================== -->
+
+    <servlet-mapping>
+        <servlet-name>RobotConfigServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RobotControlServlet</servlet-name>
+        <url-pattern>/control</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CameraProxyServlet</servlet-name>
+        <url-pattern>/camera-proxy</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RobotStatusServlet</servlet-name>
+        <url-pattern>/status</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FotoCapturaServlet</servlet-name>
+        <url-pattern>/foto</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ModoAutonomoServlet</servlet-name>
+        <url-pattern>/autonomo</url-pattern>
+    </servlet-mapping>
+
+    <!-- ==================== WELCOME FILE ==================== -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ==================== ERROR PAGES ==================== -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <!-- ==================== SESSION CONFIG ==================== -->
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+</web-app>
