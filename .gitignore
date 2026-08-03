@@ -10,7 +10,7 @@ lib/*.jar
 # OS
 .DS_Store
 Thumbs.db
-
+.target/
 # IDE
 *.iml
 .idea/
