@@ -1,0 +1,16 @@
+# NetBeans
+nbproject/private/
+build/
+dist/
+*.class
+
+# Librerías (cada desarrollador las agrega localmente)
+lib/*.jar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+*.iml
+.idea/
