@@ -1,0 +1,22 @@
+============================================================
+CARPETA lib/ — Librerías del Proyecto RobotESP32
+SENA CIMM - ADSO 228118
+============================================================
+
+Agrega aquí los siguientes archivos JAR antes de compilar:
+
+1. servlet-api.jar
+   → Copiar de: [TOMCAT_HOME]/lib/servlet-api.jar
+   → Scope: Compile Only (NO incluir en el WAR)
+
+2. jstl-1.2.jar
+   → Descargar: https://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar
+   → Scope: Compile + Runtime (SÍ incluir en el WAR)
+
+3. json-simple-1.1.1.jar
+   → Descargar: https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar
+   → Scope: Compile + Runtime (SÍ incluir en el WAR)
+
+En NetBeans:
+  Clic derecho en el proyecto → Properties → Libraries → Add JAR/Folder
+============================================================
