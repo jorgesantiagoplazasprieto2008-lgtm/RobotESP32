@@ -2,8 +2,8 @@ package co.sena.cimm.robot.servlet;
 
 import co.sena.cimm.robot.model.RobotConfig;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

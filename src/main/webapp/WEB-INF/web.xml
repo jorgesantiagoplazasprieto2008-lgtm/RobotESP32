@@ -78,6 +78,16 @@
         <url-pattern>/autonomo</url-pattern>
     </servlet-mapping>
 
+    <!-- ==================== GRABAR JSP MAPPING ==================== -->
+    <servlet>
+        <servlet-name>GrabarJsp</servlet-name>
+        <jsp-file>/grabar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GrabarJsp</servlet-name>
+        <url-pattern>/grabar</url-pattern>
+    </servlet-mapping>
+
     <!-- ==================== WELCOME FILE ==================== -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

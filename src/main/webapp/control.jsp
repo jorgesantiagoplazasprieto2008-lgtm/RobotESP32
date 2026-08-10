@@ -179,6 +179,32 @@
                                     color: var(--verde);
                                 }
 
+                                .rec-btn {
+                                    background: var(--gris-card);
+                                    border: 1px solid var(--danger);
+                                    border-radius: 6px;
+                                    color: var(--danger);
+                                    font-family: 'Share Tech Mono', monospace;
+                                    font-size: 11px;
+                                    padding: 5px 10px;
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                    transition: all 0.2s;
+                                    animation: rec-pulse 2.5s ease-in-out infinite;
+                                }
+                                .rec-btn:hover {
+                                    background: rgba(255,34,68,0.15);
+                                    box-shadow: 0 0 10px var(--danger-glow);
+                                    color: var(--danger);
+                                }
+                                @keyframes rec-pulse {
+                                    0%, 100% { box-shadow: none; }
+                                    50% { box-shadow: 0 0 7px var(--danger-glow); }
+                                }
+
                                 /* ===== PANELS ===== */
                                 .panels {
                                     display: grid;
@@ -1209,6 +1235,7 @@
                                         <%= robotConfig.isConnected() ? "ONLINE · " + robotConfig.getRobotIp()
                                             : "OFFLINE" %>
                                     </span>
+                                    <a href="<%= contextPath %>/grabar.jsp" class="rec-btn">⏺ REC</a>
                                     <a href="<%= contextPath %>/config" class="config-btn">⚙</a>
                                 </div>
                             </header>

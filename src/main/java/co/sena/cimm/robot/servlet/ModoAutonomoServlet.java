@@ -3,8 +3,8 @@ package co.sena.cimm.robot.servlet;
 import co.sena.cimm.robot.model.RobotConfig;
 import co.sena.cimm.robot.util.RobotHttpClient;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.concurrent.*;
