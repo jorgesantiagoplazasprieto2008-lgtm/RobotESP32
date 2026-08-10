@@ -1,7 +1,20 @@
+# Maven
+target/
+
 # NetBeans
 nbproject/private/
-build/
+nbbuild/
 dist/
+.nb-gradle/
+
+# Smart Tomcat
+smarttomcat/
+
+# IDE
+.idea/
+*.iml
+
+# Compilados
 *.class
 
 # Librerías (cada desarrollador las agrega localmente)
@@ -10,7 +23,3 @@ lib/*.jar
 # OS
 .DS_Store
 Thumbs.db
-
-# IDE
-*.iml
-.idea/
